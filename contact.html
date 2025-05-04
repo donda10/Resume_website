@@ -1,0 +1,107 @@
+<html><head>
+    <title>Simon Malachi | Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            
+                const form = document.querySelector("form");
+                form.addEventListener("submit", function(e) {
+                    const name = form.name.value.trim();
+                    const email = form.email.value.trim();
+                    const message = form.message.value.trim();
+                    if (!name || !email || !message) {
+                        alert("Please fill out all fields.");
+                        e.preventDefault();
+                    }
+                });
+            });
+    </script>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav">
+            <ul class="nav__list" id="nav-menu">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Hi, I'm <span class="highlight">Simon Malachi S</span></h1>
+            <p>Aspiring Full Stack Developer</p>
+            <a href="#contact" class="button">Contact Me</a>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <img src="profilepic.jpeg" alt="Profile Picture" class="profile-pic">
+            <p>Motivated and curious first-year B.E CSE student with a strong foundation in programming and web development, and a growing interest in Cloud Computing and AI/ML. Passionate about building real-world projects, expanding technical expertise, and learning through hands-on experience in dynamic environments. I was also the School Captain during my 12th grade, which helped me build leadership and team coordination skills..</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>B.E. Computer Science and Engineering</strong><br>Saveetha Engineering College (Ongoing)</li>
+                <li><strong>12th Grade  ICSE Board</strong><br>Dr. Dasarathan International School Score - 92%</li>
+                <li><strong>10th Grade  ICSE Board</strong><br> Dr. Dasarathan International School Score - 93%</li>
+            </ul>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>Languages: Python, C, Java</li>
+                <li>Web Development: HTML, CSS,Javascript,Basic Django</li>
+                <li>Tools & Technologies: Git (basics), VS Code</li>
+            </ul>
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Leadership & Team Collaboration</li>
+                <li>Effective Communication</li>
+                <li>Problem-Solving</li>
+                <li>Passion for Learning Emerging Technologies</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Django Web Application:</strong> Built a basic web app using Django, integrating templates, routing, and server-side logic.</li><a href="https://github.com/donda10/ORM" class="button" target="_blank">View</a>
+                <li><strong>Static Websites:</strong> Created multiple small websites using HTML and CSS, applying foundational layout and styling techniques.</li></li><a href="https://github.com/donda10/cover/tree/main" class="button" target="_blank">View</a>
+                <li><strong>And many more small static websites</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:simonmalachi2006@gmail.com">simonmalachi2006@gmail.com</a></p>
+            <p>Phone: 6369689200</p>
+            <p>GitHub: <a href="https://github.com/donda10" target="_blank">github.com/donda10</a></p>
+            <form>
+                <label>Name:<br><input type="text" name="name"></label><br>
+                <label>Email:<br><input type="email" name="email"></label><br>
+                <label>Message:<br><textarea name="message" rows="5"></textarea></label><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p> Simon Malachi. Thanks for visiting my website! .</p>
+    </footer>
+</body>
+</html>
